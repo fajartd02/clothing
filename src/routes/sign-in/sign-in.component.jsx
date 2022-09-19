@@ -1,3 +1,4 @@
+import SignUp from "../../components/sign-up/sign-up.component";
 import {
   createUserDocumentFromAuth,
   signInWithGooglePopUp,
@@ -13,6 +14,7 @@ const SignIn = () => {
     <>
       <h1>This is Sign In Page</h1>
       <button onClick={logGoogleUser}>Sign in with google</button>
+      <SignUp />
     </>
   );
 };
