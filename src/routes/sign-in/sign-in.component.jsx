@@ -1,4 +1,4 @@
-import SignUp from "../../components/sign-up/sign-up.component";
+import SignUp from "../../components/sign-up-form/sign-up-form.component";
 import {
   createUserDocumentFromAuth,
   signInWithGooglePopUp,
