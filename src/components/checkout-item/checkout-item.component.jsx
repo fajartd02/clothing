@@ -6,11 +6,10 @@ import "./checkout-item.styles.scss";
 const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
 
-  const { addItemToCart, removeItemToCart } = useContext(CartContext);
+  const { addItemToCart, removeItemToCart, clearItemFromCart } =
+    useContext(CartContext);
 
-  //clearItemFromCart,
-
-  //   const clearItemHandler = () => clearItemFromCart(cartItem);
+  const clearItemHandler = () => clearItemFromCart(cartItem);
   const addItemHandler = () => addItemToCart(cartItem);
   const removeItemHandler = () => removeItemToCart(cartItem);
 
@@ -30,7 +29,9 @@ const CheckoutItem = ({ cartItem }) => {
         </div>
       </span>
       <span className="price"> {price}</span>
-      <div className="remove-button">&#10005;</div>
+      <div className="remove-button" onClick={clearItemHandler}>
+        &#10005;
+      </div>
     </div>
   );
 };
