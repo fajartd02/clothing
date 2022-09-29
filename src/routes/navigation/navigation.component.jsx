@@ -1,7 +1,7 @@
 import { Fragment, useContext } from "react";
 import { Outlet } from "react-router-dom";
 
-import CardIcon from "../../components/card-icon/card-icon.component";
+import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
 import { UserContext } from "../../context/user.context";
@@ -37,7 +37,7 @@ const Navigation = () => {
           ) : (
             <NavLink to="/auth">SIGN IN</NavLink>
           )}
-          <CardIcon />
+          <CartIcon />
         </NavLinks>
         {isCartOpen && <CartDropdown />}
       </NavigationContainer>
